@@ -1,0 +1,17 @@
+@import '../AppVariables.scss';
+
+#photoBox{
+    background: $light-grey;
+    height: 200px;
+    background-image: url(../../assets/images/camera-icon.png);
+    background-position: center;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    padding: 1em;
+    margin-bottom: 2em;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}

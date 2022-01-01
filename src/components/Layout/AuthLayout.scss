@@ -1,0 +1,26 @@
+@import "../AppVariables.scss"; 
+#floatingLogo{
+    // background: #fff;
+    position: absolute;
+    width: 20em;
+    height: auto;
+    top: 3em;
+    float: left;
+    left: 50%;
+    margin-left: -10em;
+    background-color: $white;
+    min-height: 70px;
+    // border-radius: 10em;
+    z-index: 1;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);  
+    padding: 0.5em; 
+    #picBox{
+        overflow: hidden;
+    }
+    img{
+        width: 100%;
+    }
+    
+}

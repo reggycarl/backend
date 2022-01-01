@@ -1,0 +1,122 @@
+@import '../AppVariables.scss';
+.sidebar{
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background-color:$darker-grey;
+    color: $white;
+    .dropdown-toggle{
+        margin-bottom: 0 !important;
+    }
+    .dropdown-toggle::after{
+        text-align: right;
+        float: right;
+        margin-right: 1em;
+        margin-top: 0.7em;
+    }
+    
+    li{
+        // margin-left: 20em;
+        a{
+            transition: all 0.2s ;
+        }
+        a:hover, a.active, .active a{
+            border-left: 0.4em solid $yellow;
+            background-color: $dark-grey;
+        }
+
+    }
+    li.active{
+        // margin-left: 20em;
+       
+        >a{
+            border-left: 0.4em solid $yellow;
+            background-color: $dark-grey;
+        }
+
+    }
+    
+
+    
+    .caret {
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 8px solid #fff;
+        left: 90%;
+        top: 45%;
+        position: absolute;
+    }
+    .navbar-nav{
+        padding: 0;
+        margin-top: 2em;
+    }
+    .appName{
+        height: 0;
+        a{
+            padding-left: 1.5em;
+        }
+    }
+    .dropdown-menu{
+        margin: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        border-radius: 0;
+        padding: 0;
+        background: $light-blue;
+        // padding-left: 2em;
+        border: none;
+        .dropdown-item{
+            padding: 1em;
+            padding-left: 3em;
+            background-color: $dark-grey;
+            margin: 0;
+            color: $white;
+        }
+    }
+    .dropdown-menu.show{
+        // .dro
+        
+    }
+    .dropdown.show{
+        background: $dark-grey;
+    }
+    .nav-link{
+        // margin: 0.2em 1em;
+        padding:   1em 0.5em !important;
+        background-color:rgba($color: $baseColor, $alpha: 0.1);
+        // background-color: $light-blue;
+        color: $white;
+        // border-radius: 5px;
+        border: 1px solid rgba(0,0,0,.05);
+        span.icon{
+            // background-color: $base-grey;
+            svg{
+                color: $base-grey;
+                font-size: 1.2em;
+            }
+            
+            border-radius:3px;
+            padding: 0.5em;
+        }
+        svg{
+            font-size: 1em;
+            margin-left: 0.2em;
+            margin-right: 0.2em;
+            color: $black;
+            // padding: 0.2em;
+            // padding: 1em;
+    
+            
+        }
+        span{
+            margin-left: 0.5em;
+            font-weight: 700;
+            // line-height: 1.5em;
+            // margin-top: 0.5em;
+            // padding-top: 1em;
+        }
+       
+    }
+    
+}
+

@@ -1,0 +1,47 @@
+@import "../AppVariables.scss";
+.dashboardTop {
+  // background-color: $baseColor;
+  min-height: 200px;
+  // border-top: 1px solid #888;
+}
+
+.dashboardContent {
+  // margin-top: 11em;
+  border-radius: 0;
+  .card {
+    min-height: 200px;
+  }
+  .infoBox {
+    margin-bottom: 2em;
+    .inner {
+      height: 8em;
+      background-color: $dark-grey;
+      background-color: $yellow;
+      color: $white;
+      border-radius: 5px;
+      overflow: hidden;
+      -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+      .value {
+        text-align: right;
+        font-size: 3em;
+        vertical-align: middle;
+        padding-top: 0.4em;
+        span {
+          font-size: 0.8em;
+        }
+      }
+      .bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        // min-height: 2em;
+        color: $white;
+        padding: 0.4em 1.2em;
+        text-align: right;
+        background-color: $darker-grey;
+      }
+    }
+  }
+}

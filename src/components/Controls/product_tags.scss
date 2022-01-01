@@ -1,0 +1,41 @@
+@import "../AppVariables.scss";
+.ReactTags__tags {
+  padding: 0.5em;
+  min-height: 100px;
+  overflow-y: auto;
+  background-color: $light-grey;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+.ReactTags__tagInputField {
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  //   border-color: $dark-grey;
+}
+.ReactTags__tag {
+  padding: 0.5em;
+  border-radius: 20px;
+  background-color: $yellow;
+  color: $white;
+  display: inline-block;
+  border-color: transparent;
+  margin-left: 0.5em;
+  margin: 0.5em;
+  padding-left: 1em;
+  .ReactTags__remove {
+    display: inline-block;
+    margin-left: 0.5em;
+    background-color: $white;
+    border-radius: 20px;
+    padding: 0;
+
+    width: 20px;
+    height: 20px;
+    color: #000;
+    display: inline-block;
+    font-weight: bold;
+    border: none;
+  }
+}

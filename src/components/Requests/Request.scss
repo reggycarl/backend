@@ -1,0 +1,55 @@
+@import "../AppVariables.scss";
+.mapContainer{
+    height: 500px !important;
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid #ced4da;
+    #requestMap{
+        height: 100%;
+    }
+   
+}
+#partnerInfoBox{
+    border: 1px solid #ced4da ;
+    border-radius: 5px;
+    min-height: 100px;
+    background-color: $grey;
+    text-align: center;
+    svg{
+        margin-top: 1em;
+    }
+    .partnerInfo{
+        text-align: left !important;
+        margin-top: 1em;
+    }
+    .picBox{
+        border: 1px solid #000;
+        height: 80px;
+        border-radius: 5px;
+        background: $white;
+        margin: 1em;
+    }
+}
+#priceBox{
+    border: 1px solid #ced4da ;
+    border-radius: 5px;
+    height: 100px;
+    background-color: $grey;
+    .spinner{
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    h1{
+        display: block;
+        text-align: right;
+        line-height: 100px;
+        font-size: 50px;
+        span{
+            text-align: right;
+        line-height: 100px;
+        font-size: 50px;
+        }
+    }
+
+}

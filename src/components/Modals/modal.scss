@@ -1,0 +1,5 @@
+@import '../AppVariables.scss';
+tr.selected{
+    background-color: $yellow !important;
+    color: $white;
+}

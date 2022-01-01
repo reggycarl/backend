@@ -1,0 +1,33 @@
+@import "../AppVariables.scss";
+#companyBlock{
+    background-color: $white;
+    padding: 0.2em;
+    border-bottom: 1px solid rgba($color: grey, $alpha: 0.3);
+
+}
+.companyLogo{
+    text-align: center;
+    // padding: 1em;
+    min-height: 80px;
+    
+    img, .img{
+        background-color: $white;
+        width: 100%;
+        height: auto;
+        // margin-left: auto;
+        // margin-right: auto;
+        // border-radius: 100px;
+        border: none;
+    }
+
+
+    div.img{
+        padding: 0 1.2em
+    }
+}
+
+.companyName{
+    text-align: center;
+    color: $baseColor;
+    font-weight: bold;
+}

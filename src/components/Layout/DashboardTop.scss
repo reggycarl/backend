@@ -1,0 +1,14 @@
+@import "../AppVariables.scss";
+.dashboardTop{
+    color: $white
+}
+.welcomeMessage{
+    margin-top: 4em;
+    h1{
+        font-weight: 300;
+    }
+    p{
+        font-weight: bold;
+    }
+
+}

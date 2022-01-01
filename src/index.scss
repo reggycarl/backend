@@ -1,0 +1,34 @@
+@import "./components/AppVariables.scss";
+* {font-size: 10px;}
+body, html{
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $baseColor !important;
+  font-family: 'Nunito', sans-serif !important;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.navbar{
+  padding: 0 !important;
+}
+.navbar-brand, .navbar-nav{
+  padding: 0.5em ;
+}
+.navbar-dark .navbar-text, .navbar-dark .navbar-nav .nav-link{
+  color: #fff !important;
+  font-weight: 500;
+}
+.form-control:disabled{
+  background-color: #e9ecef !important;
+  opacity: 1;
+}
+

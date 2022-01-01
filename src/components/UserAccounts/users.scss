@@ -1,0 +1,27 @@
+@import "../AppVariables.scss";
+
+.boxContainer {
+  background: $base-grey;
+  //   background: #000 !important;
+  min-height: 200px;
+}
+.pictureBox {
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  background: $white;
+  border-radius: 100px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.subBox {
+  background: $yellow;
+  //   min-height: 70px;
+  padding: 1em;
+}
+.figures {
+  font-size: 15pt;
+  color: $white;
+  padding: 0.5em;
+  font-weight: bold;
+}

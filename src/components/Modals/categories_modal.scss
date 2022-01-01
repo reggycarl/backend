@@ -1,0 +1,22 @@
+@import '../AppVariables.scss';
+.catWrapper{
+    
+    .categoryBox{
+        display: inline-block;
+        // background-color: #999;
+        min-width: 180px;
+        border: 1px solid $light-grey;
+        ul{
+            margin: 0;
+            padding:0;
+            list-style: none;
+            li{
+                padding: .5em 1em;
+                border-bottom: 1px solid $light-grey ;
+            }
+            li.selected{
+                background: $yellow;
+            }
+        }
+    }
+}

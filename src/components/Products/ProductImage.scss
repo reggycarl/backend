@@ -1,0 +1,26 @@
+@import'../AppVariables.scss';
+.photo{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 1em;
+    max-width: 33%;
+    flex: auto;
+    // background-color: white;
+    img{
+        width: 100%;
+    }
+    .photoActions{
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        padding: 5px;
+        background-color: rgba(0,0,0 ,.5);
+        svg{
+            color: $white;
+            margin: 5px 
+        }
+        
+    }
+    
+}

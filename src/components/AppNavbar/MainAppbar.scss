@@ -1,0 +1,82 @@
+@import '../AppVariables.scss';
+
+.mainApp{
+    // background-color: $baseColor;
+    .btn-secondary{
+        // background-color: transparent;
+        border: none;
+        margin-left: 0.5em;
+        :hover, :active{
+            // background-color: rgba(255,255,255,0.2) !important;
+        }
+    }
+    .dropdown.show{
+        button{
+            // background: #fff;
+            color: $baseColor;
+        }
+        
+        p{
+            color: $baseColor !important;
+        };
+        #userImg{
+            border-color: $baseColor !important;
+        }
+    }
+    .navName{
+        // padding-top: 3em;
+        line-height: 1em;
+        vertical-align: middle;
+        b{
+            // padding-top: 1em;
+            
+            // padding: 0;
+            // padding-top: 1em;
+        }
+        // line-height: 2em;
+        // margin-top: 1em;
+    }
+    .largeDropdown{
+        width: 300px;
+        overflow: scroll;
+        padding: 5px;
+        .MainNavAppContainer{
+            .appBox{
+            text-align: center;
+            transition: padding 0.2s;
+            .col{
+                // background: $grey;
+                margin: 0;
+                padding: 0
+            }
+            svg{
+                margin-top: 0.5em !important;
+            // padding-bottom: 1em;
+            }
+        }
+        .appBox:hover{
+            // text-align: center;
+            padding: 0 !important;
+            .col, p{
+                background: $baseColor;
+                color: $white !important;
+            }
+            
+        }
+    }}
+}
+.sidebarBtn{
+    // color: $white;
+    // font-size: 25px;
+    // font-weight: bold;
+    // background-color: $white;
+    line-height: 1;
+    padding: .5em;
+    margin-left: 1em;
+    
+}
+.sidebarBtn:hover{
+    // background-color:$white;
+    // padding: .5em;
+    border: 1px solid $white;
+}

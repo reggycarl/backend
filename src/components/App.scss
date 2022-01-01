@@ -1,0 +1,177 @@
+@import "./AppVariables.scss";
+html {
+  // font-size: 12px !important;
+}
+body {
+  background-color: $base-grey !important;
+}
+* {
+  font-size: 13px;
+}
+
+.App {
+  /* text-align: center; */
+  background: #f5f7fa;
+}
+
+.dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+}
+.centered {
+  text-align: center;
+}
+
+.dropdown.show .dropdown-menu {
+  /* For Bootstrap 4, use .dropdown.show instead of .dropdown.open */
+  max-height: 600px;
+  opacity: 1;
+}
+.dropdown-menu {
+  h3 {
+    background: $dark-grey !important;
+    margin: 0 !important;
+    color: $yellow;
+    padding: 0.5em 2em;
+    border-bottom: 1px solid $darker-grey;
+    border-left: 5px solid $darker-grey;
+    font-size: 1.2em;
+  }
+}
+.card-title {
+  font-weight: bold;
+  // font-size: 1.2em;
+  border-bottom: 1px solid $baseColor;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  ul {
+    list-style: none;
+    // padding: 0;
+    // margin: 0;
+    float: right;
+
+    padding-bottom: 10px;
+    li {
+      float: left;
+      margin-right: 0.5em;
+    }
+    li:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+.right {
+  text-align: right;
+}
+
+.btn-primary {
+  background-color: $baseColor !important;
+}
+.MainNavAppContainer {
+  .appBox {
+    // width: 70px;
+
+    // margin-left: -10px !important;
+    // margin-right: -10px !important;
+    padding: 5px !important;
+    > .col {
+      background-color: $grey;
+      border: 1px solid $dark-grey;
+      height: 70px;
+    }
+  }
+}
+.full_width {
+  width: 100%;
+}
+.scoll_horizontal {
+  overflow-x: auto;
+  table {
+    width: auto !important;
+  }
+}
+.card-title {
+  // padding-left: 15px;
+  // padding-right: 15px;
+  ul {
+    margin-bottom: 0;
+  }
+}
+.react-tel-input {
+  .form-control {
+    // padding: 0;
+    width: 100% !important;
+    padding-top: 0;
+    padding-bottom: 0 !important;
+    height: 30px !important;
+  }
+}
+
+.right {
+  text-align: right;
+}
+
+.block {
+  display: block !important;
+  text-align: left;
+  // .react-toggle-track-x{
+  //   display: inline;
+  // }
+}
+
+.modal-full {
+  min-width: 20%;
+  // margin-left: 20;
+  max-width: 90%;
+  .modal-content {
+    min-height: 80vh;
+  }
+}
+
+label {
+  font-weight: bold;
+}
+
+.Toastify__toast-body {
+  padding: 0.5em 1em !important;
+  .btn {
+    margin-top: 1em;
+  }
+}
+.inline {
+  display: inline !important;
+}
+.block {
+  display: block !important;
+}
+.card50 {
+  height: 140px !important;
+  min-height: 140px !important;
+}
+.card50.yellow {
+  background: $yellow;
+  border: none;
+  color: $white;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  .inner {
+    box-shadow: none !important;
+  }
+  h2 {
+    span {
+      font-size: 50px;
+    }
+  }
+}

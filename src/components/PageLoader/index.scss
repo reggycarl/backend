@@ -1,0 +1,9 @@
+
+@import '../AppVariables.scss';
+.loaderWrapper{
+    background-color: $white;
+    border-radius: 1px solid $baseColor-grey;
+    min-height: 100px;
+    text-align: center;
+
+}

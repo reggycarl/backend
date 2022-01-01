@@ -1,0 +1,57 @@
+@import "../AppVariables.scss";
+.DeliveryBox{
+    border: 1px solid #ced4da ;
+    min-height: 100px;
+    border-radius: 5px;
+    padding: 10px;
+    .item{
+        .inner{
+            border: 1px solid #ced4da ;
+        // background-color: $dark-grey;
+        border-radius: 5px;
+        min-height: 80px;
+        // width: 80px !important;
+        margin-bottom: 1em;
+        transition: all 0.5s;
+        padding: 0;
+        overflow: hidden;
+        }
+        .inner:hover{
+            border: 1px solid #000;
+            // border-color: $yellow;
+            cursor: pointer;
+            
+        }
+        .inner.selected{
+            border-color: $yellow;
+            .title{
+                background-color: $yellow;
+                color: black;
+            }
+        }
+        .icon{
+            height: 60px;
+            text-align: center;
+            display: block;
+            padding-top: 10px;
+            svg{
+                height: 100%;
+                font-size: 1.2em !important;
+                
+            }
+            svg.selected{
+                color: $yellow;
+            }
+        }
+        .title{
+            // position: absolute;
+            // bottom: 0;
+            // left: 0;
+            width: 100%;
+            text-align: center;
+            // color: $white;
+            padding: 0.2em 0.5em;
+            background: rgba(0,0,0,0.2);
+        }
+    }
+}

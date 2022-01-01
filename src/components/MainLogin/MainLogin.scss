@@ -1,0 +1,31 @@
+@import "../AppVariables.scss";
+.loginDiv{
+    // background: #fff;
+    min-height: 20em;
+    
+}
+#loginForm{
+    // padding-top: 2em;
+    // padding: 6em 6em;
+    ul{
+        margin-bottom: 0;
+    }
+    
+}
+.header{
+    h2{
+        margin-bottom: 1.5em;
+    }
+    
+}
+.login-btn{
+    margin-bottom: 1em;
+}
+
+.signup{
+    text-align: left; 
+    margin-top: 1em;
+}
+.resetPassword{
+    padding-top: 0.5em;
+}
