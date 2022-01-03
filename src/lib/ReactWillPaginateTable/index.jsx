@@ -20,6 +20,8 @@ export default class ReactWillPaginateTable extends Component {
     page: this.props.page || 1,
     search_string: "",
     new_params: "",
+    isEditting: false,
+    selectedId: null,
   };
   // populateDownloadData = () => {
   //   var params = qs.parse(this.props.location.search || {});
@@ -201,30 +203,58 @@ export default class ReactWillPaginateTable extends Component {
   };
   redirectToPage =(e,row) =>{
     e.preventDefault();
-      
+
         console.log("calling redirect function")
         this.props.history.push(
           `${
             this.props.link_endpoint ?? this.props.endpoint
           }/${row.uuid}`
         );
-      
-    
+
+
     }
-    editRow =(e,row)=>{
-     
+    editRow = (e,row) => {
+
+      e.preventDefault();
+      console.log("LOGGINSING to see edit " )
+      console.log(row.id + "info in row")
+
+      this.setState({
+        ...this.state,
+        isEditting: true,
+        selectedId: row.id
+      });
+    }
+  saveChanges=(e,row)=>{
     e.preventDefault();
-    console.log("LOGGINSING to see edit " )
-    console.log(row.id + "info in row")  
-
-      if (this.props.isEditting && row.id === row){
-        
-      }
-      }
-      
-
+   this.makeAxiosRequest(row)
     
+  }
+  formValue=() =>{
+    this.props.onValueChange
+    this.setState({
   
+    })
+    
+ }
+  makeAxiosRequest = (row) => {
+    this.props.axiosInstance.put(`/products/${row.uuid}`, {
+    product:this.state.row}, )
+    .then(function (response) {
+      console.log(response);
+      
+    })
+};
+
+  handleNewChange = (e,row) => {
+    this.setState({
+     row:e.target.value
+      
+    })
+    console.log("changingStatus"+ e.target.value)
+  }
+
+
   render() {
     return (
       <React.Fragment>
@@ -281,7 +311,7 @@ export default class ReactWillPaginateTable extends Component {
                   ""
                 )}
               </tr>
-             
+
             </thead>
             {this.state.loading ? (
               <tr>
@@ -300,9 +330,9 @@ export default class ReactWillPaginateTable extends Component {
                       onClick={(e) => {
                         if (!this.props.disable_link || !this.props.show_edit_actions) {
                         this.redirectToPage(e,row)
-                      }} 
-                    
-                      
+                      }}
+
+
                     }
                     >
                       <td>
@@ -310,36 +340,39 @@ export default class ReactWillPaginateTable extends Component {
                           index +
                           1}
                       </td>
-                      {this.props.columns.map((col) => {
-                        var data;
-                        if (col.number == true) {
-                          data = data = (
-                            <td className={"right"}>
-                              <NumberField value={row[col.name]} />
-                            </td>
-                          );
-                        } else if (col.boolean == true) {
-                          data = (
-                            <td className={""}>
-                              {row[col.field || col.name]
-                                ? col.options[0]
-                                : col.options[1]}
-                            </td>
-                          );
-                        } else if (col.date == true) {
-                          data = (
-                            <td className={""}>
-                              {formatDate(row[col.field || col.name])}
-                            </td>
-                          );
-                        } else {
-                          data = (
-                            <td className={""}>{row[col.field || col.name]}</td>
-                          );
-                        }
+                      {
+                        this.props.columns.map((col) => {
+                          var data;
+                          
+                          if (col.number == true) {
+                            data = data = (
+                              <td className={"right"} >
+                                <NumberField value={row[col.name]} displayType={this.state.isEditting && row.id === this.state.selectedId ? "input":"text"}/>
+                              </td>
+                            );
+                          } else if (col.boolean == true) {
+                            data = (
+                              <td className={""}>
+                                {row[col.field || col.name]
+                                  ? col.options[0]
+                                  : col.options[1]}
+                              </td>
+                            );
+                          } else if (col.date == true) {
+                            data = (
+                              <td className={""}>
+                                {formatDate(row[col.field || col.name])}
+                              </td>
+                            );
+                          } else {
+                            data = (
+                              <td className={""} >{row[col.field || col.name]}</td>
+                            );
+                          }
 
-                        return data;
-                      })}
+                          return data;
+                        })
+                      }
                       {this.props.actions && this.props.actions.length > 0 ? (
                         <td>
                           {" "}
@@ -372,18 +405,27 @@ export default class ReactWillPaginateTable extends Component {
                       ) : (
                         ""
                       )}
-                       {this.props.show_edit_actions? <td><button onClick ={(e)=>{
-                         this.editRow(e,row)
-                         console.log("in edit button")
-                       }}>Edit</button> <button onClick={(e) => {
+                       {this.props.show_edit_actions? 
+                       
+                       <td>
+                    {this.state.isEditting && row.id === this.state.selectedId ?
+                    <button onClick ={(e)=> {this.saveChanges(e,row)
+                    console.log("value" + row.id)
+                    }} onChange={this.handleNewChange}>Save </button>
+                    :
+                    <button onClick ={(e)=>{
+                      this.editRow(e,row)
+                    }}>Edit</button> }
+                  
+                         <button onClick={(e) => {
                         this.redirectToPage(e,row)
                         console.log("clicking view button ")
                       }}>view</button></td>:  " "}
                     </tr>
                   );
                 })}
-               
-                
+
+
               </tbody>
             ) : (
               <tr>
