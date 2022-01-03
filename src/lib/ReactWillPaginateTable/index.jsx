@@ -230,13 +230,8 @@ export default class ReactWillPaginateTable extends Component {
    this.makeAxiosRequest(row)
     
   }
-  formValue=() =>{
-    this.props.onValueChange
-    this.setState({
-  
-    })
-    
- }
+ 
+
   makeAxiosRequest = (row) => {
     this.props.axiosInstance.put(`/products/${row.uuid}`, {
     product:this.state.row}, )

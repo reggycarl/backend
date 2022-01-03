@@ -11,10 +11,11 @@ import _ from 'lodash'
 import { bindActionCreators } from 'redux'
  class Products extends Component {
     componentDidMount = () => {
-        
+
     }
+
     render() {
-        var columns= [{name: "sku"},{name: 'name'},{name: "regular_price"}, {name: "sale_price"}, {name: "Inventory", field: "quantity"},{name: "date", field: "created_at", date: true}, { name: "status", field: "active", boolean: true, options: ["Active", "Inactive"]}] 
+        var columns= [{name: "sku"},{name: 'name'},{name: "regular_price",number:true}, {name: "sale_price",number: true}, {name: "Inventory", field: "quantity",number:true},{name: "date", field: "created_at", date: true}, { name: "status", field: "active", boolean: true, options: ["Active", "Inactive"]}]
         if(this.props.authentication.default_path == "/admins/"){
             columns = [ ...columns, { name: "company_name"}]
         }
@@ -28,7 +29,17 @@ import { bindActionCreators } from 'redux'
                         </ul>
                         </CardTitle>
                         <CardText>
-                           <ReactWillPaginateTable show_edit_actions={true} disable_link={true} isEditting ={true}  axiosInstance={axiosInstance} columns={columns} endpoint={`${this.props.authentication.default_path}products`} link_endpoint={`${this.props.authentication.default_path}products`} additional_params={!_.isEmpty(this.props.authentication.user) ? `current_company_id=${this.props.authentication.user.current_company_id}` : ""}  {...this.props}  />
+                           <ReactWillPaginateTable
+                              show_edit_actions={true}
+                              disable_link={true}
+                              editRow={this.editRow}
+                              axiosInstance={axiosInstance}
+                              columns={columns}
+                              endpoint={`${this.props.authentication.default_path}products`}
+                              link_endpoint={`${this.props.authentication.default_path}products`}
+                              additional_params={!_.isEmpty(this.props.authentication.user) ? `current_company_id=${this.props.authentication.user.current_company_id}` : ""}
+                              {...this.props}
+                            />
                         </CardText>
                     </CardBody>
                 </Card>
